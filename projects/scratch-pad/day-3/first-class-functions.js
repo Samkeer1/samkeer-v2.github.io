@@ -81,7 +81,7 @@ function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     // loop over all the elements of the array
     for(let i = 0; i < strings.length; i++){
-        if(test(strings[i]) === false){
+        if(!test(strings[i])){
             return false;
         }
     }

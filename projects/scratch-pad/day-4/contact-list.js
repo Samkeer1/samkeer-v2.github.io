@@ -51,13 +51,41 @@ function makeContactList() {
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
+        },
+        addContact: function(contact){
+            contacts.push(makeContact(contact));
+        },
+        findContact: function(fullName){
+            
+            //iterate through contact list using for loop
+            for(let i = 0; i < contacts.length; i++){
+                //within id object
+                if(contacts[i].id.nameFirst + " " + contacts[i].id.nameLast === fullName){
+                    return contacts[i].id;
+                }
+            }
+          return undefined;
+        },
+        removeContact: function(contact){
+            for(let i = 0; i < contacts.length; i++){
+                if(contacts[i].id === contact){
+                    contacts.splice(i, 1);
+                }
+            }
+        },
+        printAllContactNames: function(){
+            //result array
+            let result = [];
+              //loop through elements to extract first and last names
+              for(let i = 0; i < contacts.length; i++){
+                 //push concatenated first and last names from each object into array.
+                 result.push(contacts[i].id.nameFirst + " " + contacts[i].id.nameLast);
+                  console.log(contacts[i]);
+              }
+            return result.join("\n"); //return all first and last names separated by line break
+            
         }
-        // addContact: function(contact){
-        //     contacts.push(makeContact(contact));
-        // }
-        
-        // findContact: 
-    }
+    };
 }
 
 

@@ -78,23 +78,12 @@ function typeOf(value) {
     // YOUR CODE BELOW HERE //
     if(isArray(value)){
         return "array";
-    } else if(isObject(value)){
-        return "object";
-    } else if(typeof value === "number"){
-        return "number";
-    } else if(typeof value === 'string'){
-        return "string";
-    } else if(value === undefined){
-        return "undefined";
-    } else if(value === null){
+    }else if(value === null){
         return "null";
-    } else if(typeof value === 'function'){
-        return "function";
-    } else if(typeof value === 'boolean'){
-        return "boolean";
-    } else if(value instanceof Date){
+    }else if(value instanceof Date){
         return "date";
     }
+    return typeof value;
     // YOUR CODE ABOVE HERE //
 }
 
