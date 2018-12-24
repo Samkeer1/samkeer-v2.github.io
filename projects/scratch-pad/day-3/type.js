@@ -48,10 +48,7 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    if(isArray(value) || isObject(value)){
-        return true;
-    }
-  return false;
+    return isArray(value) || isObject(value);
     // YOUR CODE ABOVE HERE //
 }
 
@@ -76,13 +73,17 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
+    //start out with my array function because typeof array will give you object in a string, not array
     if(isArray(value)){
         return "array";
+    //else if value is null, return "null"
     }else if(value === null){
         return "null";
+    //if value is instance of date, return "date"
     }else if(value instanceof Date){
         return "date";
     }
+    //otherwise return typeof value because it produces strings with what you want inside
     return typeof value;
     // YOUR CODE ABOVE HERE //
 }

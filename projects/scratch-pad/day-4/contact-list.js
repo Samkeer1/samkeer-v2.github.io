@@ -83,7 +83,6 @@ function makeContactList() {
                   console.log(contacts[i]);
               }
             return result.join("\n"); //return all first and last names separated by line break
-            
         }
     };
 }
