@@ -137,6 +137,7 @@ return false;
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+require('./path/to/jaques_journal.js');
 if ((typeof process !== 'undefined') &&
   (typeof process.versions.node !== 'undefined')) {
   module.exports = {
