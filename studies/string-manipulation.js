@@ -1,10 +1,9 @@
 //String Manipulation
 /*
-String manipulation can involve methods, operators, assignment, etc. There are many useful 
-ways to manipulate strings to meet the needs of most issues.
+String manipulation involves the altering of the string data types. 
 
-Strings, despite being primitive data types, are accessed in a similar manner to arrays: 
-bracket notation. 
+Strings elements, despite being primitive data types, are accessed in a similar manner to arrays: 
+bracket notation.
 */
  
 //1. String Manipulation with Operators
@@ -14,11 +13,12 @@ One can use assignment operators, logical operators, arithmetic operators, etc. 
 in any way imaginable.
 */
 let x = "I am a very well written String!";
-x + " I might just be the best string ever created... just wow."; //arithmetic operator
+x += " I might just be the best string ever created... just wow."; 
 
 //assignment operator:
-x += " But I am just a string nonetheless..."; //changes the string x is set to.
-
+x = x + " But I am just a string nonetheless..."; //reassigns x to x concatenated with the previous value 
+//of x
+console.log(x); //returns 
 //2. Escaping from the Text
 /*
 In order to write certain characters within strings, such as apostrophes, slashes, new lines, etc.,
@@ -65,3 +65,7 @@ myNewString.charAt(myNewString.length - 1); // returns ".", for it's the last le
 
 //To conclude, strings are manipulatable in very similar ways to arrays but it's important to differentiate 
 //the methods and properties each have, because they are also very different data types.
+
+//...but are string methods pure? Yes, they are. This is due to the fact that they are referring to a 
+//primitive data type. Therefore, any string manipulation copies the value and returns something different, 
+//even if it's an altered version of a string. It's still stored in a different place in memory.

@@ -77,6 +77,9 @@ function switchStatements(color){
 switchStatements("Dusty Plateau in Westernmost Texas, Land of the Truly Free to do as they Please");
 //the above function call returns, as you might have guessed, "Wow, such beautiful colors."
 
+//it is important to note that switch statements offer STRICT comparison; this means each CASE is 
+//CASE sensitive!
+
 //Some might find it simpler, but code blocks offer a bit more versatility, so switch statements are less commonly
 //used, at least for our current educational purposes.
 

@@ -49,7 +49,7 @@ for(let key in obj1){
 //this produces nameFirst, nameLast, or the names of the keys.
 //to produce the values, we use bracket notation :
 for(let key in obj1){
-    console.log(obj[key]);
+    console.log(obj1[key]);
 }
 //this produces the values contained within the keys, logged to the console
 // 'Sam' 'Keer'
@@ -98,8 +98,12 @@ the elements, or the keys based on how we set up our loop.
 let myObj1 = {3: "forty two", 4: "123", semi : "colon"};
 for(let key in myObj1){
     console.log(myObj1[key]); //logs each value stored in each key 
-    console.log(key) // logs 3, 4, semi
+    console.log(key); // logs 3, 4, semi
 }
+//this is the 'for in loop' we used earlier.
 
-//accessing keys is done the same way, but without the bracket notation, because key represents 
-//the keys.
+//you can also use the Object.keys function to display all keys, or the Object.values function to 
+//display all values and assign them to variables as arrays.
+
+Object.keys(obj1);
+Object.values(obj1);

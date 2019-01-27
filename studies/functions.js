@@ -52,13 +52,12 @@ function plusTwo(x){
 
 //4. Function assignment to variable
 /*
-We just covered this in 3, but if we really need to go over it again, to assign a function to 
-a variable, we declare a variable, and assign a function to it.
+To assign a function to a variable, we declare a variable, and assign a function to it.
 */
 //let is the variable declaration, plusOne is the variable name, it's assigned a function that returns 
-//the argument plus 1
-let plusOne = function(x){
-    return x + 1;
+//the argument plus 3
+let plusThree = function(x){
+    return x + 3;
 };
 
 //5. Whether or Not A Function Requires Arguments
@@ -117,7 +116,7 @@ function makeClosure(){
 //if I were to call makeClosure()(), i would return 8 because I called a function
 //that returns a function, and called that function with my second set of parentheses.
 
-//first class functions are functions that either take a function as a parameter or return functions
+//functions can return other functions:
 function baseMultiply(base){
     return (x) => x * base;
 }

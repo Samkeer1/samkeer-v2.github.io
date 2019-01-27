@@ -32,13 +32,16 @@ console.log(myName); // prints => bob
 
 // NOTE: We can assign and re-assign anything to a variable - we cannot do this with constants //
 var myVariable = 1;
-var myVariable = true;
+console.log(myVariable);
+myVariable = true;
+console.log(myVariable);
 myVariable = "someString";
 
 // 4. let //
 if(x === y){ // basic example of block scope, the 'if statement'.
 let myCar = "Foreign"; //declaration
-let myCar = "Something else"; //reassignment doesn't work with constants, you get a "duplicate declaration error"
+console.log(myCar);
+myCar = "Something else"; //reassignment doesn't work with constants, you get a "duplicate declaration error"
 myCar = "Foreign"; //declared globally, overwrites myCar as a global variable. no longer scoped
 }
 
@@ -49,8 +52,8 @@ it's block or function scope. The only way to change a value assigned to const, 
 assigned to a variable that is mutable.
 */
 const unChangeable = 1;
-const unChangeAble += 1; //doesn't work, results in error.
-
+console.log(unChangeable = 2); //doesn't work, results in error because const doesn't allow reassignment.
+console.log(unChangeable); //returns 1;
 var xyz = [1, 2, 3];
 const someWhatChangeable = xyz; 
 console.log(someWhatChangeable); //returns [1, 2, 3];
@@ -77,13 +80,14 @@ let hoistMe = 2;
 //function hoistAllDay(x){
 //   return x + 2;
 //}
-hoistAllDay(hoistMe);
-let hoistMe;
-
+hoistAllDay(hoistMe1);
+var hoistMe1;
 //then the code is run like this:
+/*
 hoistAllDay(undefined){
     return undefined + 2; //result is NaN because let hoistMe = 2 wasn't declared until after the function.
 }
+*/
 
 //7. Scope
 /*
@@ -112,18 +116,23 @@ of code that the window has no access to.
 */
 
 let globalScope = "I'm globally accessible.";
-
+let newX = 5;
 function localScope(x){
     var newX = x;
+    console.log(newX);
 }
 localScope(globalScope);
-console.log(newX); //returns undefined, because var is function scoped. 
+
+console.log(newX); //returns 5, instead of the globalScope value because var declarations are function scoped
 //within the function, if you were to console.log(newX), it would show up as "I'm globally accessible."
 
-let x;
+var x;
+var z = 10;
 if(x === undefined){
     let z = 5; //this code is executed, however let is block scoped, so the global scope will not have 
     //access to variable z.
     var y = 10; //var is function scoped, but not block scoped, so y is now a globally accessible 
     //variable
+    console.log(z); //this will be 5, refers to the z inside the block scope of the 'if statement'.
 }
+console.log(z);// this will be 10, refers to the z outside the block scope of the 'if statement'.

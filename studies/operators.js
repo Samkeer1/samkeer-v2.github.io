@@ -1,7 +1,4 @@
 
-
-Ternary operator (a ? b : c)
-
 //Operators 
 /*
 Operators basically determine which operation the program is going to perform, depending on 
@@ -88,12 +85,12 @@ or determine what type of value it is, etc. They are versatile and often change 
 type you're working with.
 */
 //incrementers are unary operators
-1++; //evaluates to 2;
-1--; //evaluates to 0;
+let y = 1;
+console.log(y++); //evaluates to 2;
+let x = 1;
+console.log(x--); //evaluates to 0;
 typeof 1; //evaluates to 'number'
 !true; //evaluates to false
-Array.isArray([1, 2, 3]); //evaluates to true 
-Object.keys({1:'2', 2: '3'}); //evaluates to [1, 2];
 -1; // - makes a number negative
 //6. Ternary Operators
 /*
